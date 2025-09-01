@@ -1,0 +1,11 @@
+---
+const { Textbold, Textitalic, TextS } = Astro.props;
+---
+
+<div class="mb-5">
+  <p>
+    <span class="font-bold">{Textbold}</span>
+    <span class="italic ml-2">{Textitalic}</span>
+  </p>
+  <p class="text-sm mt-1">{TextS}</p>
+</div>
