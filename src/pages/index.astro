@@ -10,13 +10,23 @@ import Programs from "../components/programs.astro";
 ---
 
 <MainLayout title="Titel">
-  <main>
-    <section>
+  <main class="text-[#1470AF] bg-[#EAEAEE] pt-10">
+    <section id="om-mig" class="scroll-mt-24">
       <div class="relative top-25 overflow-hidden w-full">
-        <h1 class="uppercase text-6xl whitespace-nowrap">
-          Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold Simplicity
-          - Bold Simplicity - Bold Simplicity -
-        </h1>
+        <div class="runningtext">
+          <h1
+            class="uppercase text-6xl whitespace-nowrap text-[#035EC7] font-extrabold mx-8"
+          >
+            Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
+            Simplicity - Bold Simplicity -
+          </h1>
+          <h1
+            class="uppercase text-6xl whitespace-nowrap text-[#035EC7] font-extrabold mx-8"
+          >
+            Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
+            Simplicity - Bold Simplicity -
+          </h1>
+        </div>
       </div>
       <div
         class="grid md:grid-cols-2 md:grid-rows-4 gap-4 m-5 items-center lg:ml-40 lg:mr-40"
@@ -46,201 +56,225 @@ import Programs from "../components/programs.astro";
       </div>
     </section>
 
-    <section class="m-10">
-      <div class="uppercase md:hidden text-center">Uddannelse</div>
-      <div><InfoHeader /></div>
+    <section id="kvalifikationer" class="m-10 md:ml-30 md:mr-30 scroll-mt-24">
+      <article class="mb-10">
+        <div class="uppercase md:hidden font-extrabold text-center">
+          Uddannelse
+        </div>
+        <div><InfoHeader /></div>
 
-      <div class="grid md:grid-cols-3 gap-4 mt-4">
-        <Education
-          header="Niels Brock HHX 2015 - 2018"
-          subheader="Markedsføring"
-          text1="Forståelse for målgrupper og branding."
-          text2="Strategisk tænkning og kommunikation."
-          text3="Erfaring med projektstyring og teamwork."
-          text4="Forretningsindsigt til værdiskabende design."
-        />
-
-        <Education
-          header="Magasin du nord 2020 - 2022"
-          subheader="Elev med profil"
-          text1="Kundeorienteret service og behovsafklaring."
-          text2="Erfaring med præsentation og visuel merchandising."
-          text3="Håndtering af travle miljøer og deadlines."
-          text4="Teamwork og effektiv kommunikation."
-          text5="Fokus på kvalitet og sans for detaljer."
-        />
-
-        <Education
-          header="Erhvervsakademi København2024 - nu"
-          subheader="Multimediedesign"
-          text1="Kompetencer i UI/UX design og prototyping."
-          text2="Erfaring med webudvikling (HTML, CSS, JavaScript)."
-          text3="Animation og videoredigering med After Effects og Premiere Pro."
-          text4="Arbejde med brugercentreret design og research."
-          text5="Fokus på kreativ problemløsning og visuel kommunikation."
-        />
-      </div>
-    </section>
-
-    <section class="m-10">
-      <div class="uppercase md:hidden text-center">Erfaring</div>
-      <div><InfoHeader /></div>
-
-      <div class="grid md:grid-cols-3 gap-4 mt-4">
-        <Education
-          header="Fra retail branchen til multimediedesign"
-          text1="Stærk kundeorientering og fokus på brugeroplevelser."
-          text2="Øje for detaljer og æstetik i præsentationer."
-          text3="Erfaring med problemløsning og håndtering af komplekse opgaver."
-          text4="Effektiv tidsstyring og arbejde under pres."
-          text5="Gode samarbejds- og kommunikationsevner."
-        />
-        <Education
-          header="Webmaster for Dansk Kirurgisk Selskab 2025 – nu"
-          text1="Erfaring med webudvikling i Wix og JavaScript."
-          text2="Kompetencer i Figma."
-          text3="Selvstændig arbejdsform med ansvar for planlægning og styring af egne opgaver og tid."
-          text4="Fleksibel tilpasning til deadlines og løbende kommunikation med samarbejdspartnere."
-        />
-      </div>
-    </section>
-
-    <section class="m-10">
-      <div class="uppercase md:hidden text-center">Programmer</div>
-      <div><InfoHeader /></div>
-
-      <div class="grid md:grid-cols-3 md:gap-4 mt-4">
-        <div class="md:mr-20">
-          <Programs
-            Textbold="Figma"
-            Textitalic="Øvet"
-            TextS="Til design af prototyper, brugergrænseflader, moodboards, designsystemer mm."
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <Education
+            header="Niels Brock HHX 2015 - 2018"
+            subheader="Markedsføring"
+            text1="Forståelse for målgrupper og branding."
+            text2="Strategisk tænkning og kommunikation."
+            text3="Erfaring med projektstyring og teamwork."
+            text4="Forretningsindsigt til værdiskabende design."
           />
-          <Programs
-            Textbold="Adobe Illustrator"
-            Textitalic="Øvet"
-            TextS="Til illustrationer, ikoner, logodesign og grafiske elementer til print, web og animation."
+
+          <Education
+            header="Magasin du nord 2020 - 2022"
+            subheader="Elev med profil"
+            text1="Kundeorienteret service og behovsafklaring."
+            text2="Erfaring med præsentation og visuel merchandising."
+            text3="Håndtering af travle miljøer og deadlines."
+            text4="Teamwork og effektiv kommunikation."
+            text5="Fokus på kvalitet og sans for detaljer."
           />
-          <Programs
-            Textbold="Visual Studio Code"
-            Textitalic="Øvet"
-            TextS="Til kodning i HTML, CSS, JavaScript og astro."
-          />
-          <Programs
-            Textbold="Wix"
-            Textitalic="Øvet"
-            TextS="Til opbygning og design af hjemmesider i et brugervenligt drag-and-drop system."
+
+          <Education
+            header="Erhvervsakademi København 2024 - nu"
+            subheader="Multimediedesign"
+            text1="Kompetencer i UI/UX design og prototyping."
+            text2="Erfaring med webudvikling (HTML, CSS, JavaScript)."
+            text3="Animation og videoredigering med After Effects og Premiere Pro."
+            text4="Arbejde med brugercentreret design og research."
+            text5="Fokus på kreativ problemløsning og visuel kommunikation."
           />
         </div>
-        <div class="md:mr-20">
-          <Programs
-            Textbold="Microsoft Office-pakken"
-            Textitalic="Øvet"
-            TextS="Til effektiv opgaveløsning og organisering med programmer som Word, PowerPoint og Excel."
+      </article>
+
+      <article class="mb-10">
+        <div class="uppercase font-extrabold md:hidden text-center">
+          Erfaring
+        </div>
+        <div><InfoHeader /></div>
+
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+          <Education
+            header="Fra retail branchen til multimediedesign"
+            text1="Stærk kundeorientering og fokus på brugeroplevelser."
+            text2="Øje for detaljer og æstetik i præsentationer."
+            text3="Erfaring med problemløsning og håndtering af komplekse opgaver."
+            text4="Effektiv tidsstyring og arbejde under pres."
+            text5="Gode samarbejds- og kommunikationsevner."
           />
-          <Programs
-            Textbold="Canva"
-            Textitalic="Øvet"
-            TextS="Til hurtige designs og visuelt indhold."
-          />
-          <Programs
-            Textbold="Git/GitHub"
-            Textitalic="Let øvet"
-            TextS="Til versionsstyring og samarbejde om projekter."
-          />
-          <Programs
-            Textbold="Adobe After Effects"
-            Textitalic="Begynder"
-            TextS="Til animationer og motion graphics."
+          <Education
+            header="Webmaster for Dansk Kirurgisk Selskab 2025 – nu"
+            text1="Erfaring med webudvikling i Wix og JavaScript."
+            text2="Kompetencer i Figma."
+            text3="Selvstændig arbejdsform med ansvar for planlægning og styring af egne opgaver og tid."
+            text4="Fleksibel tilpasning til deadlines og løbende kommunikation med samarbejdspartnere."
           />
         </div>
-        <div class="md:mr-20">
-          <Programs
-            Textbold="Adobe Premiere Pro"
-            Textitalic="Begynder"
-            TextS="Til videoredigering og storytelling."
-          />
-          <Programs
-            Textbold="Adobe Photoshop"
-            Textitalic="Begynder"
-            TextS="Til billedredigering."
-          />
-          <Programs
-            Textbold="LottieFiles"
-            Textitalic="Begynder"
-            TextS="Til integration af animationer på webprojekter."
-          />
+      </article>
+
+      <article class="mb-10">
+        <div class="uppercase font-extrabold md:hidden text-center">
+          Programmer
         </div>
-      </div>
+        <div><InfoHeader /></div>
+
+        <div class="grid md:grid-cols-3 md:gap-4 mt-4">
+          <div class="md:mr-20">
+            <Programs
+              Textbold="Figma"
+              Textitalic="Øvet"
+              TextS="Til design af prototyper, brugergrænseflader, moodboards, designsystemer mm."
+            />
+            <Programs
+              Textbold="Adobe Illustrator"
+              Textitalic="Øvet"
+              TextS="Til illustrationer, ikoner, logodesign og grafiske elementer til print, web og animation."
+            />
+            <Programs
+              Textbold="Visual Studio Code"
+              Textitalic="Øvet"
+              TextS="Til kodning i HTML, CSS, JavaScript og astro."
+            />
+            <Programs
+              Textbold="Wix"
+              Textitalic="Øvet"
+              TextS="Til opbygning og design af hjemmesider i et brugervenligt drag-and-drop system."
+            />
+          </div>
+          <div class="md:mr-20">
+            <Programs
+              Textbold="Microsoft Office-pakken"
+              Textitalic="Øvet"
+              TextS="Til effektiv opgaveløsning og organisering med programmer som Word, PowerPoint og Excel."
+            />
+            <Programs
+              Textbold="Canva"
+              Textitalic="Øvet"
+              TextS="Til hurtige designs og visuelt indhold."
+            />
+            <Programs
+              Textbold="Git/GitHub"
+              Textitalic="Let øvet"
+              TextS="Til versionsstyring og samarbejde om projekter."
+            />
+            <Programs
+              Textbold="Adobe After Effects"
+              Textitalic="Begynder"
+              TextS="Til animationer og motion graphics."
+            />
+          </div>
+          <div class="md:mr-20">
+            <Programs
+              Textbold="Adobe Premiere Pro"
+              Textitalic="Begynder"
+              TextS="Til videoredigering og storytelling."
+            />
+            <Programs
+              Textbold="Adobe Photoshop"
+              Textitalic="Begynder"
+              TextS="Til billedredigering."
+            />
+            <Programs
+              Textbold="LottieFiles"
+              Textitalic="Begynder"
+              TextS="Til integration af animationer på webprojekter."
+            />
+          </div>
+        </div>
+      </article>
     </section>
 
     <!-- MOBILE -->
-    <section class="m-10 md:hidden">
-      <div class="text-center max-w-150">
-        <h2>Kunne du tænke dig at høre mere?</h2>
-        <p>
-          Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
-          mit arbejde, mine kompetencer eller mulige samarbejder.
-        </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
-      </div>
+    <div id="kontakt" class="scroll-mt-24">
+      <section class="bg-[#1470AF]/20 md:hidden">
+        <div class="pt-20 pb-15 pl-10 pr-10">
+          <div class="text-center max-w-150">
+            <h2 class="font-extrabold">Kunne du tænke dig at høre mere?</h2><br
+            />
+            <p>
+              Du er altid velkommen til at tage kontakt, hvis du vil vide mere
+              om mit arbejde, mine kompetencer eller mulige samarbejder.
+            </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
+          </div>
 
-      <div class="m-10 justify-center">
-        <img src="/img/calendermobile.webp" alt="Calender" />
-      </div>
+          <div class="m-10 justify-center">
+            <img src="/img/calendermobile.webp" alt="Calender" />
+          </div>
 
-      <div class="items-center flex justify-center gap-2 m-4">
-        <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
-          Celinakhrs@gmail.com
-        </p>
-      </div>
+          <div class="items-center flex justify-center gap-2 m-4">
+            <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
+              <a
+                href="mailto:celinakhrs@gmail.com"
+                class="underline
+             hover:text-[#035EC7]"
+                >celinakhrs@gmail.com</a
+              >
+            </p>
+          </div>
 
-      <div class="items-center flex justify-center gap-2 m-4">
-        <img
-          class="w-7"
-          src="/img/linkedinlightblue.webp"
-          alt="linkedin icon"
-        /><p>
-          <Link
-            href="https://www.linkedin.com/in/celina-sguazzino/"
-            target="_blank">Besøg min Linkedin</Link
-          >
-        </p>
-      </div>
-    </section>
-
-    <!-- WEB -->
-    <section
-      class="hidden md:grid grid-cols-2 gap-4 m-10 items-center lg:ml-50 lg:mr-50"
-    >
-      <div class="relative left-20 top-5 max-w-150">
-        <img src="/img/calender.webp" alt="Calender" />
-      </div>
-
-      <div class="text-center max-w-150">
-        <h2>Kunne du tænke dig at høre mere?</h2>
-        <p>
-          Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
-          mit arbejde, mine kompetencer eller mulige samarbejder.
-        </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
-        <div class="items-center flex justify-center gap-2 m-4">
-          <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
-            Celinakhrs@gmail.com
-          </p>
+          <div class="items-center flex justify-center gap-2 m-4">
+            <img
+              class="w-7"
+              src="/img/linkedinlightblue.webp"
+              alt="linkedin icon"
+            /><p>
+              <Link
+                href="https://www.linkedin.com/in/celina-sguazzino/"
+                target="_blank">Besøg min Linkedin</Link
+              >
+            </p>
+          </div>
         </div>
-        <div class="items-center flex justify-center gap-2 m-4">
-          <img
-            class="w-7"
-            src="/img/linkedinlightblue.webp"
-            alt="linkedin icon"
-          /><p>
-            <Link
-              href="https://www.linkedin.com/in/celina-sguazzino/"
-              target="_blank">Besøg min Linkedin</Link
-            >
-          </p>
+      </section>
+
+      <!-- WEB -->
+      <section
+        class="hidden bg-[#1470AF]/20 md:grid grid-cols-2 gap-4 items-center inset-0"
+      >
+        <div class="relative left-20 top-5 max-w-150 mt-30">
+          <img src="/img/calender.webp" alt="Calender" />
         </div>
-      </div>
-    </section>
+
+        <div class="text-center max-w-150 pr-10">
+          <h2 class="font-extrabold">Kunne du tænke dig at høre mere?</h2>
+          <br />
+          <p>
+            Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
+            mit arbejde, mine kompetencer eller mulige samarbejder.
+          </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
+          <div class="items-center flex justify-center gap-2 m-4">
+            <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
+              <a
+                href="mailto:celinakhrs@gmail.com"
+                class="underline
+             hover:text-[#035EC7]"
+                >celinakhrs@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="items-center flex justify-center gap-2 m-4">
+            <img
+              class="w-7"
+              src="/img/linkedinlightblue.webp"
+              alt="linkedin icon"
+            /><p>
+              <Link
+                href="https://www.linkedin.com/in/celina-sguazzino/"
+                target="_blank">Besøg min Linkedin</Link
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <!-- 
@@ -254,3 +288,19 @@ import Programs from "../components/programs.astro";
   <Image src={thumbsup} alt="" />
 -->
 </MainLayout>
+
+<style>
+  .runningtext {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

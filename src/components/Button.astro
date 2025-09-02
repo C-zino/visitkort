@@ -1,5 +1,26 @@
 ---
+const { variant = "primary", size = "medium" } = Astro.props;
+
+// Styling
+const buttonStyling =
+  "rounded-lg font-semibold transition-colors duration-200 shadow focus:outline-none";
+
+// Varianter
+const variantClasses = {
+  primary:
+    "border-2 border-[#1470AF] bg-[#1470AF] text-white hover:bg-white hover:text-[#1470AF]",
+  secondary:
+    "border-2 border-[#1470AF] bg-white text-[#1470AF] hover:bg-[#1470AF] hover:text-white",
+};
+
+// Størrelser
+const sizeClasses = {
+  large: "px-8 py-3 text-lg",
+  medium: "px-6 py-2 text-base",
+  small: "px-3 py-1 text-sm",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}
+  ><slot /></button
+>
