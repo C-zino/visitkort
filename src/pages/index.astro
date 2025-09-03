@@ -7,6 +7,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Education from "../components/education.astro";
 import InfoHeader from "../components/Infoheader.astro";
 import Programs from "../components/programs.astro";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Titel">
@@ -14,18 +15,20 @@ import Programs from "../components/programs.astro";
     <section id="om-mig" class="scroll-mt-24">
       <div class="relative md:top-30 overflow-hidden w-full">
         <div class="runningtext">
-          <h1
-            class="uppercase text-6xl lg:text-9xl whitespace-nowrap HollowTextSm lg:HollowText font-extrabold font-heading mx-8"
+          <Text
+            teksttype="hollow-sm"
+            stylingclasses="uppercase text-6xl lg:text-9xl whitespace-nowrap lg:hollow-lg font-extrabold font-heading mx-8"
           >
             Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
             Simplicity - Bold Simplicity -
-          </h1>
-          <h1
-            class="uppercase text-6xl lg:text-9xl whitespace-nowrap HollowTextSm lg:HollowText font-extrabold font-heading mx-8"
+          </Text>
+          <Text
+            teksttype="hollow-sm"
+            stylingclasses="uppercase text-6xl lg:text-9xl whitespace-nowrap lg:hollow-lg font-extrabold font-heading mx-8"
           >
             Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
             Simplicity - Bold Simplicity -
-          </h1>
+          </Text>
         </div>
       </div>
       <div
@@ -50,7 +53,8 @@ import Programs from "../components/programs.astro";
             at design først virkelig skiller sig ud, når det får et twist. Min
             stil balancerer det bløde og enkle med det kantede, og jeg elsker at
             give projekter et strejf af farve, energi og personlighed.
-          </p><p>
+          </p>
+          <p>
             For mig handler godt design om mere end æstetik. Det skal være
             funktionelt, brugervenligt og skabe oplevelser, der fanger øjet og
             bliver husket.
@@ -68,14 +72,15 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="text-primary">Udannelse</span>
-            <span slot="erfaring" class="HollowTextSmPrimary">Erfaring</span>
-            <span slot="programmer" class="HollowTextSmPrimary">Programmer</span
+            <Text slot="udannelse" teksttype="text-primary">Udannelse</Text>
+            <Text slot="erfaring" teksttype="hollow-sm-primary">Erfaring</Text>
+            <Text slot="programmer" teksttype="hollow-sm-primary"
+              >Programmer</Text
             >
           </InfoHeader>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <div class="grid lg:grid-cols-3 gap-4 mt-4">
           <Education
             header="Niels Brock HHX 2015 - 2018"
             subheader="Markedsføring"
@@ -115,14 +120,16 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="HollowTextSmPrimary">Udannelse</span>
-            <span slot="erfaring" class="text-primary">Erfaring</span>
-            <span slot="programmer" class="HollowTextSmPrimary">Programmer</span
+            <Text slot="udannelse" teksttype="hollow-sm-primary">Udannelse</Text
+            >
+            <Text slot="erfaring" teksttype="text-primary">Erfaring</Text>
+            <Text slot="programmer" teksttype="hollow-sm-primary"
+              >Programmer</Text
             >
           </InfoHeader>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <div class="grid lg:grid-cols-3 gap-4 mt-4">
           <Education
             header="Fra retail branchen til multimediedesign"
             text1="Stærk kundeorientering og fokus på brugeroplevelser."
@@ -149,13 +156,14 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="HollowTextSmPrimary">Udannelse</span>
-            <span slot="erfaring" class="HollowTextSmPrimary">Erfaring</span>
-            <span slot="programmer" class="text-primary">Programmer</span>
+            <Text slot="udannelse" teksttype="hollow-sm-primary">Udannelse</Text
+            >
+            <Text slot="erfaring" teksttype="hollow-sm-primary">Erfaring</Text>
+            <Text slot="programmer" teksttype="text-primary">Programmer</Text>
           </InfoHeader>
         </div>
 
-        <div class="grid md:grid-cols-3 md:gap-4 mt-4">
+        <div class="grid lg:grid-cols-3 md:gap-4 mt-4">
           <div class="md:mr-20">
             <Programs
               Textbold="Figma"
@@ -224,29 +232,32 @@ import Programs from "../components/programs.astro";
     <!-- MOBILE -->
     <div id="kontakt" class="scroll-mt-24">
       <section class="bg-secondary/20 md:hidden">
-        <div class="pt-20 pb-15 pl-10 pr-10">
-          <div class="text-center max-w-150">
-            <h2 class="font-extrabold text-[20px]">
+        <div class="pt-20 pb-15">
+          <div class="text-center max-w-md mx-auto px-4">
+            <h2 class="font-extrabold text-[20px] mb-4">
               Kunne du tænke dig at høre mere?
-            </h2><br />
-            <p>
+            </h2>
+            <p class="mb-2">
               Du er altid velkommen til at tage kontakt, hvis du vil vide mere
               om mit arbejde, mine kompetencer eller mulige samarbejder.
-            </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
+            </p>
+            <br />
+            <p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
           </div>
 
-          <div class="m-10 justify-center">
+          <div class="flex justify-center pl-15 pr-15">
             <img src="/img/calendermobile.webp" alt="Calender" />
           </div>
 
           <div class="items-center flex justify-center gap-2 m-4">
-            <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
+            <img class="w-7" src="/img/mail.webp" alt="mail icon" />
+            <p>
               <a
                 href="mailto:celinakhrs@gmail.com"
-                class="underline
-             hover:text-primary"
-                >celinakhrs@gmail.com</a
+                class="underline hover:text-primary"
               >
+                celinakhrs@gmail.com
+              </a>
             </p>
           </div>
 
@@ -255,7 +266,8 @@ import Programs from "../components/programs.astro";
               class="w-7"
               src="/img/linkedinlightblue.webp"
               alt="linkedin icon"
-            /><p>
+            />
+            <p>
               <Link
                 href="https://www.linkedin.com/in/celina-sguazzino/"
                 target="_blank">Besøg min Linkedin</Link
@@ -281,15 +293,18 @@ import Programs from "../components/programs.astro";
           <p>
             Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
             mit arbejde, mine kompetencer eller mulige samarbejder.
-          </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
+          </p>
+          <br />
+          <p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
           <div class="items-center flex justify-center gap-2 m-4 pt-10">
-            <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
+            <img class="w-7" src="/img/mail.webp" alt="mail icon" />
+            <p>
               <a
                 href="mailto:celinakhrs@gmail.com"
-                class="underline
-             hover:text-primary"
-                >celinakhrs@gmail.com</a
+                class="underline hover:text-primary"
               >
+                celinakhrs@gmail.com
+              </a>
             </p>
           </div>
           <div class="items-center flex justify-center gap-2 m-4">
@@ -297,7 +312,8 @@ import Programs from "../components/programs.astro";
               class="w-7"
               src="/img/linkedinlightblue.webp"
               alt="linkedin icon"
-            /><p>
+            />
+            <p>
               <Link
                 href="https://www.linkedin.com/in/celina-sguazzino/"
                 target="_blank">Besøg min Linkedin</Link
@@ -308,17 +324,6 @@ import Programs from "../components/programs.astro";
       </section>
     </div>
   </main>
-
-  <!-- 
-<article>
-  <h1>Index overskrift</h1>
-  <Button>Klik!</Button>
-  <p>
-    Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link
-    >
-  </p>
-  <Image src={thumbsup} alt="" />
--->
 </MainLayout>
 
 <style>
