@@ -10,18 +10,18 @@ import Programs from "../components/programs.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="text-[#1470AF] bg-[#EAEAEE] pt-10">
+  <main class="text-[#1470AF] bg-[#EAEAEE] font-main pt-40 md:pt-10">
     <section id="om-mig" class="scroll-mt-24">
-      <div class="relative top-25 overflow-hidden w-full">
+      <div class="relative md:top-30 overflow-hidden w-full">
         <div class="runningtext">
           <h1
-            class="uppercase text-6xl whitespace-nowrap text-[#035EC7] font-extrabold mx-8"
+            class="uppercase text-6xl lg:text-9xl whitespace-nowrap HollowTextSm lg:HollowText font-extrabold font-heading mx-8"
           >
             Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
             Simplicity - Bold Simplicity -
           </h1>
           <h1
-            class="uppercase text-6xl whitespace-nowrap text-[#035EC7] font-extrabold mx-8"
+            class="uppercase text-6xl lg:text-9xl whitespace-nowrap HollowTextSm lg:HollowText font-extrabold font-heading mx-8"
           >
             Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
             Simplicity - Bold Simplicity -
@@ -31,14 +31,17 @@ import Programs from "../components/programs.astro";
       <div
         class="grid md:grid-cols-2 md:grid-rows-4 gap-4 m-5 items-center lg:ml-40 lg:mr-40"
       >
-        <div class="md:row-span-4 w-full h-full object-cover">
+        <div
+          class="max-w-xl m-auto md:pt-12 lg:pt-0 md:row-span-4 w-full h-full"
+        >
           <img
             src="/img/profilewframe.webp"
             alt="Profile pic with blue frame"
+            class="object-contain"
           />
         </div>
         <div
-          class="md:col-start-2 md:row-start-2 row-span-3 max-w-120 text-center m-10 md:m-0 md:text-left"
+          class="md:col-start-2 md:row-start-2 row-span-3 max-w-2xl text-center md:text-left mx-auto md:mx-0 px-10 pb-10"
         >
           <p>
             Jeg hedder Celina og studerer Multimediedesign på EK, hvor jeg
@@ -58,10 +61,18 @@ import Programs from "../components/programs.astro";
 
     <section id="kvalifikationer" class="m-10 md:ml-30 md:mr-30 scroll-mt-24">
       <article class="mb-10">
-        <div class="uppercase md:hidden font-extrabold text-center">
+        <div
+          class="font-heading text-[20px] tracking-[0.10em] uppercase md:hidden font-extrabold text-center"
+        >
           Uddannelse
         </div>
-        <div><InfoHeader /></div>
+        <div>
+          <InfoHeader>
+            <span slot="udannelse" class="text-[#035EC7]">Udannelse</span>
+            <span slot="erfaring" class="HollowTextSm">Erfaring</span>
+            <span slot="programmer" class="HollowTextSm">Programmer</span>
+          </InfoHeader>
+        </div>
 
         <div class="grid md:grid-cols-3 gap-4 mt-4">
           <Education
@@ -96,10 +107,18 @@ import Programs from "../components/programs.astro";
       </article>
 
       <article class="mb-10">
-        <div class="uppercase font-extrabold md:hidden text-center">
+        <div
+          class="font-heading text-[20px] tracking-[0.10em] uppercase font-extrabold md:hidden text-center"
+        >
           Erfaring
         </div>
-        <div><InfoHeader /></div>
+        <div>
+          <InfoHeader>
+            <span slot="udannelse" class="HollowTextSm">Udannelse</span>
+            <span slot="erfaring" class="text-[#035EC7]">Erfaring</span>
+            <span slot="programmer" class="HollowTextSm">Programmer</span>
+          </InfoHeader>
+        </div>
 
         <div class="grid md:grid-cols-3 gap-4 mt-4">
           <Education
@@ -121,10 +140,18 @@ import Programs from "../components/programs.astro";
       </article>
 
       <article class="mb-10">
-        <div class="uppercase font-extrabold md:hidden text-center">
+        <div
+          class="font-heading text-[20px] tracking-[0.10em] uppercase font-extrabold md:hidden text-center"
+        >
           Programmer
         </div>
-        <div><InfoHeader /></div>
+        <div>
+          <InfoHeader>
+            <span slot="udannelse" class="HollowTextSm">Udannelse</span>
+            <span slot="erfaring" class="HollowTextSm">Erfaring</span>
+            <span slot="programmer" class="text-[#035EC7]">Programmer</span>
+          </InfoHeader>
+        </div>
 
         <div class="grid md:grid-cols-3 md:gap-4 mt-4">
           <div class="md:mr-20">
@@ -197,8 +224,9 @@ import Programs from "../components/programs.astro";
       <section class="bg-[#1470AF]/20 md:hidden">
         <div class="pt-20 pb-15 pl-10 pr-10">
           <div class="text-center max-w-150">
-            <h2 class="font-extrabold">Kunne du tænke dig at høre mere?</h2><br
-            />
+            <h2 class="font-extrabold text-[20px]">
+              Kunne du tænke dig at høre mere?
+            </h2><br />
             <p>
               Du er altid velkommen til at tage kontakt, hvis du vil vide mere
               om mit arbejde, mine kompetencer eller mulige samarbejder.
@@ -237,20 +265,22 @@ import Programs from "../components/programs.astro";
 
       <!-- WEB -->
       <section
-        class="hidden bg-[#1470AF]/20 md:grid grid-cols-2 gap-4 items-center inset-0"
+        class="hidden bg-[#1470AF]/20 md:flex gap-4 items-center justify-center inset-0 py-16"
       >
-        <div class="relative left-20 top-5 max-w-150 mt-30">
+        <div class="max-w-150">
           <img src="/img/calender.webp" alt="Calender" />
         </div>
 
-        <div class="text-center max-w-150 pr-10">
-          <h2 class="font-extrabold">Kunne du tænke dig at høre mere?</h2>
+        <div class="text-center max-w-135 pr-10">
+          <h2 class="font-extrabold text-[25px]">
+            Kunne du tænke dig at høre mere?
+          </h2>
           <br />
           <p>
             Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
             mit arbejde, mine kompetencer eller mulige samarbejder.
           </p><br /><p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
-          <div class="items-center flex justify-center gap-2 m-4">
+          <div class="items-center flex justify-center gap-2 m-4 pt-10">
             <img class="w-7" src="/img/mail.webp" alt="mail icon" /><p>
               <a
                 href="mailto:celinakhrs@gmail.com"
@@ -293,7 +323,7 @@ import Programs from "../components/programs.astro";
   .runningtext {
     display: flex;
     width: max-content;
-    animation: marquee 20s linear infinite;
+    animation: marquee 50s linear infinite;
   }
   @keyframes marquee {
     0% {

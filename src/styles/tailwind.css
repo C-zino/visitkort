@@ -5,8 +5,29 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'anton'; 
+  src: url('/fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --font-main: 'Poppins', sans-serif;
+  --font-heading: 'anton', sans-serif;
+
+  
 }
 
 @layer base {
@@ -24,4 +45,17 @@
 }
 @layer utilities{
   
+}
+
+
+.HollowText {
+  color: transparent;             
+  -webkit-text-stroke: 4px #035EC7; 
+
+}
+
+.HollowTextSm {
+  color: transparent;             
+  -webkit-text-stroke: 1.5px #035EC7; 
+
 }
