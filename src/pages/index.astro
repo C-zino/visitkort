@@ -10,7 +10,7 @@ import Programs from "../components/programs.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="text-[#1470AF] bg-[#EAEAEE] font-main pt-40 md:pt-10">
+  <main class="text-primary bg-background font-main pt-40 md:pt-10">
     <section id="om-mig" class="scroll-mt-24">
       <div class="relative md:top-30 overflow-hidden w-full">
         <div class="runningtext">
@@ -68,9 +68,10 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="text-[#035EC7]">Udannelse</span>
-            <span slot="erfaring" class="HollowTextSm">Erfaring</span>
-            <span slot="programmer" class="HollowTextSm">Programmer</span>
+            <span slot="udannelse" class="text-primary">Udannelse</span>
+            <span slot="erfaring" class="HollowTextSmPrimary">Erfaring</span>
+            <span slot="programmer" class="HollowTextSmPrimary">Programmer</span
+            >
           </InfoHeader>
         </div>
 
@@ -114,9 +115,10 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="HollowTextSm">Udannelse</span>
-            <span slot="erfaring" class="text-[#035EC7]">Erfaring</span>
-            <span slot="programmer" class="HollowTextSm">Programmer</span>
+            <span slot="udannelse" class="HollowTextSmPrimary">Udannelse</span>
+            <span slot="erfaring" class="text-primary">Erfaring</span>
+            <span slot="programmer" class="HollowTextSmPrimary">Programmer</span
+            >
           </InfoHeader>
         </div>
 
@@ -147,9 +149,9 @@ import Programs from "../components/programs.astro";
         </div>
         <div>
           <InfoHeader>
-            <span slot="udannelse" class="HollowTextSm">Udannelse</span>
-            <span slot="erfaring" class="HollowTextSm">Erfaring</span>
-            <span slot="programmer" class="text-[#035EC7]">Programmer</span>
+            <span slot="udannelse" class="HollowTextSmPrimary">Udannelse</span>
+            <span slot="erfaring" class="HollowTextSmPrimary">Erfaring</span>
+            <span slot="programmer" class="text-primary">Programmer</span>
           </InfoHeader>
         </div>
 
@@ -221,7 +223,7 @@ import Programs from "../components/programs.astro";
 
     <!-- MOBILE -->
     <div id="kontakt" class="scroll-mt-24">
-      <section class="bg-[#1470AF]/20 md:hidden">
+      <section class="bg-secondary/20 md:hidden">
         <div class="pt-20 pb-15 pl-10 pr-10">
           <div class="text-center max-w-150">
             <h2 class="font-extrabold text-[20px]">
@@ -242,7 +244,7 @@ import Programs from "../components/programs.astro";
               <a
                 href="mailto:celinakhrs@gmail.com"
                 class="underline
-             hover:text-[#035EC7]"
+             hover:text-primary"
                 >celinakhrs@gmail.com</a
               >
             </p>
@@ -265,7 +267,7 @@ import Programs from "../components/programs.astro";
 
       <!-- WEB -->
       <section
-        class="hidden bg-[#1470AF]/20 md:flex gap-4 items-center justify-center inset-0 py-16"
+        class="hidden bg-secondary/20 md:flex gap-4 items-center justify-center inset-0 py-16"
       >
         <div class="max-w-150">
           <img src="/img/calender.webp" alt="Calender" />
@@ -285,7 +287,7 @@ import Programs from "../components/programs.astro";
               <a
                 href="mailto:celinakhrs@gmail.com"
                 class="underline
-             hover:text-[#035EC7]"
+             hover:text-primary"
                 >celinakhrs@gmail.com</a
               >
             </p>

@@ -24,8 +24,15 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+
+  /* fonts */
   --font-main: 'Poppins', sans-serif;
   --font-heading: 'anton', sans-serif;
+
+  /* colors */
+  --color-background: #EAEAEE;
+  --color-primary: #1470AF;
+  --color-secondary: #035EC7;
 
   
 }
@@ -50,12 +57,18 @@
 
 .HollowText {
   color: transparent;             
-  -webkit-text-stroke: 4px #035EC7; 
+  -webkit-text-stroke: 4px var(--color-secondary); 
 
 }
 
 .HollowTextSm {
   color: transparent;             
-  -webkit-text-stroke: 1.5px #035EC7; 
+  -webkit-text-stroke: 1.5px var(--color-secondary); 
+
+}
+
+.HollowTextSmPrimary {
+  color: transparent;             
+  -webkit-text-stroke: 1px var(--color-primary); 
 
 }
