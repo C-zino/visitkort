@@ -55,22 +55,22 @@ const currentPath = pathname.slice(1);
   </div>
 
   <nav
-    id="mobilmenu"
-    x-show="showmenu"
-    x-transition
-    x-on:click.outside="showmenu = false"
-    class="lg:hidden fixed top-[60px] left-0 w-full flex flex-col items-center uppercase font-heading tracking-[0.10em] bg-background text-primary p-4 z-40"
-  >
-    <ul class="w-full border-t-2 border-b-2 border-primary">
-      <li class="text-center py-2 hover:text-secondary pb-4">
-        <a href="#om-mig">Om mig</a>
-      </li>
-      <li class="text-center py-2 hover:text-secondary pb-4">
-        <a href="#kvalifikationer">Kvalifikationer</a>
-      </li>
-      <li class="text-center py-2 hover:text-secondary">
-        <a href="#kontakt">Kontakt</a>
-      </li>
-    </ul>
-  </nav>
+  id="mobilmenu"
+  x-show="showmenu"
+  x-transition
+  x-on:click.outside="showmenu = false"
+  class="lg:hidden fixed top-[60px] left-0 w-full flex flex-col items-center uppercase font-heading tracking-[0.10em] bg-background text-primary p-4 z-40"
+>
+  <ul class="w-full border-t-2 border-b-2 border-primary">
+    <li class="text-center py-2 hover:text-secondary pb-4">
+      <a href="#om-mig" x-on:click="showmenu = false">Om mig</a>
+    </li>
+    <li class="text-center py-2 hover:text-secondary pb-4">
+      <a href="#kvalifikationer" x-on:click="showmenu = false">Kvalifikationer</a>
+    </li>
+    <li class="text-center py-2 hover:text-secondary">
+      <a href="#kontakt" x-on:click="showmenu = false">Kontakt</a>
+    </li>
+  </ul>
+</nav>
 </header>
