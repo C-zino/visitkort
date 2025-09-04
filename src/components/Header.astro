@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<header x-data="{ showmenu: false }" class="relative">
+<div x-data="{ showmenu: false }" class="relative">
   <!-- navbar -->
   <div
     id="navbar"
@@ -73,4 +73,4 @@ const currentPath = pathname.slice(1);
     </li>
   </ul>
 </nav>
-</header>
+
