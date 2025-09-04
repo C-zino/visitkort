@@ -54,21 +54,3 @@
   
 }
 
-
-.HollowText {
-  color: transparent;             
-  -webkit-text-stroke: 4px var(--color-secondary); 
-
-}
-
-.HollowTextSm {
-  color: transparent;             
-  -webkit-text-stroke: 1.5px var(--color-secondary); 
-
-}
-
-.HollowTextSmPrimary {
-  color: transparent;             
-  -webkit-text-stroke: 1px var(--color-primary); 
-
-}

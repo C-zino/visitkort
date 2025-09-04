@@ -1,36 +1,76 @@
 ---
-
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
-<div
-  class="font-heading fixed top-0 left-0 w-full z-50 text-center whitespace-nowrap lg:flex items-center justify-between bg-background px-8 py-4"
->
-  <p class="uppercase text-primary text-3xl lg:text-5xl tracking-[0.10em]">
-    Celina Sguazzino
-  </p>
-  <div class="tracking-[0.16em] flex gap-12 justify-center mt-5 text-xs">
-    <p
-      class="transform transition-transform duration-300 ease-in-out
-               hover:-translate-y-0.5"
-    >
-      <a href="#om-mig" class="uppercase text-primary text-lg">Om Mig</a>
-    </p>
-    <p
-      class="transform transition-transform duration-300 ease-in-out
-               hover:-translate-y-0.5"
-    >
-      <a href="#kvalifikationer" class="uppercase text-primary text-lg"
-        >Kvalifikationer</a
+<header x-data="{ showmenu: false }" class="relative">
+  <!-- navbar -->
+  <div
+    id="navbar"
+    class="font-heading fixed top-0 left-0 w-full z-50 flex items-center justify-between bg-background px-8 py-4"
+  >
+    <div id="logo">
+      <a
+        href="#"
+        class="uppercase text-primary text-3xl lg:text-5xl tracking-[0.10em]"
       >
-    </p>
-    <p
-      class="transform transition-transform duration-300 ease-in-out
-               hover:-translate-y-0.5"
-    >
-      <a href="
-      #kontakt" class="uppercase text-primary text-lg">
-        Kontakt
+        Celina Sguazzino
       </a>
-    </p>
+    </div>
+
+    <nav
+      class="hidden lg:block uppercase text-primary text-lg tracking-[0.16em]"
+    >
+      <ul class="flex gap-12 justify-center mt-5">
+        <li
+          class="transform transition-transform duration-300 ease-in-out
+               hover:-translate-y-0.5"
+        >
+          <a href="#om-mig">Om mig</a>
+        </li>
+        <li
+          class="transform transition-transform duration-300 ease-in-out
+               hover:-translate-y-0.5"
+        >
+          <a href="#kvalifikationer">Kvalifikationer</a>
+        </li>
+        <li
+          class="transform transition-transform duration-300 ease-in-out
+               hover:-translate-y-0.5"
+        >
+          <a href="#kontakt">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      id="burgermenu"
+      class="lg:hidden flex flex-col justify-between w-6 h-5 hover:cursor-pointer"
+      x-on:click="showmenu = !showmenu"
+    >
+      <span class="block h-0.5 w-full bg-primary"></span>
+      <span class="block h-0.5 w-full bg-primary"></span>
+      <span class="block h-0.5 w-full bg-primary"></span>
+    </button>
   </div>
-</div>
+
+  <nav
+    id="mobilmenu"
+    x-show="showmenu"
+    x-transition
+    x-on:click.outside="showmenu = false"
+    class="lg:hidden fixed top-[60px] left-0 w-full flex flex-col items-center uppercase font-heading tracking-[0.10em] bg-background text-primary p-4 z-40"
+  >
+    <ul class="w-full border-t-2 border-b-2 border-primary">
+      <li class="text-center py-2 hover:text-secondary pb-4">
+        <a href="#om-mig">Om mig</a>
+      </li>
+      <li class="text-center py-2 hover:text-secondary pb-4">
+        <a href="#kvalifikationer">Kvalifikationer</a>
+      </li>
+      <li class="text-center py-2 hover:text-secondary">
+        <a href="#kontakt">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+</header>

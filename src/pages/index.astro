@@ -1,13 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Education from "../components/education.astro";
-import InfoHeader from "../components/Infoheader.astro";
 import Programs from "../components/programs.astro";
 import Text from "../components/Text.astro";
+import Headings from "../components/Heading.astro";
 ---
 
 <MainLayout title="Titel">
@@ -15,20 +12,12 @@ import Text from "../components/Text.astro";
     <section id="om-mig" class="scroll-mt-24">
       <div class="relative md:top-30 overflow-hidden w-full">
         <div class="runningtext">
-          <Text
-            teksttype="hollow-sm"
-            stylingclasses="uppercase text-6xl lg:text-9xl whitespace-nowrap lg:hollow-lg font-extrabold font-heading mx-8"
-          >
-            Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
-            Simplicity - Bold Simplicity -
-          </Text>
-          <Text
-            teksttype="hollow-sm"
-            stylingclasses="uppercase text-6xl lg:text-9xl whitespace-nowrap lg:hollow-lg font-extrabold font-heading mx-8"
-          >
-            Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold
-            Simplicity - Bold Simplicity -
-          </Text>
+        <Headings htmlheading="h1" size="large" font="anton" stylingclasses="hollow" >
+  Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold Simplicity -
+</Headings>
+ <Headings htmlheading="h1" size="large" font="anton" stylingclasses="hollow" >
+  Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold Simplicity - Bold Simplicity -
+</Headings>
         </div>
       </div>
       <div
@@ -44,21 +33,23 @@ import Text from "../components/Text.astro";
           />
         </div>
         <div
-          class="md:col-start-2 md:row-start-2 row-span-3 max-w-2xl text-center md:text-left mx-auto md:mx-0 px-10 pb-10"
+          class="md:col-start-2 md:row-start-2 row-span-3 max-w-2xl text-center md:text-left mx-auto md:mx-0 pb-10 px-10"
         >
-          <p>
-            Jeg hedder Celina og studerer Multimediedesign på EK, hvor jeg
+          <Text text="brødtekst"
+          
+          >  Jeg hedder Celina og studerer Multimediedesign på EK, hvor jeg
             fordyber mig i design, kreativitet og digitale løsninger. Jeg har en
             forkærlighed for ren struktur og visuel klarhed – men jeg tror på,
             at design først virkelig skiller sig ud, når det får et twist. Min
             stil balancerer det bløde og enkle med det kantede, og jeg elsker at
-            give projekter et strejf af farve, energi og personlighed.
-          </p>
-          <p>
+            give projekter et strejf af farve, energi og personlighed. </Text >
+          <Text text="brødtekst"
+          
+          > 
             For mig handler godt design om mere end æstetik. Det skal være
             funktionelt, brugervenligt og skabe oplevelser, der fanger øjet og
             bliver husket.
-          </p>
+		</Text >
         </div>
       </div>
     </section>
@@ -70,15 +61,23 @@ import Text from "../components/Text.astro";
         >
           Uddannelse
         </div>
-        <div>
-          <InfoHeader>
-            <Text slot="udannelse" teksttype="text-primary">Udannelse</Text>
-            <Text slot="erfaring" teksttype="hollow-sm-primary">Erfaring</Text>
-            <Text slot="programmer" teksttype="hollow-sm-primary"
-              >Programmer</Text
-            >
-          </InfoHeader>
-        </div>
+      
+			<div class="pb-10 pt-5">
+  <div
+    class="hidden md:grid md:grid-cols-3 gap-4 mb-2 items-center text-center"
+  >
+   <Headings htmlheading="h2" size="medium" >Udannelse</Headings>
+  <Headings htmlheading="h2" size="medium" font="anton" stylingclasses="hollowSm">
+  Erfaring
+</Headings>
+
+<Headings htmlheading="h2" size="medium" font="anton" stylingclasses="hollowSm">
+  Programmer
+</Headings>
+  </div>
+  <div class="border border-[#035EC7]"></div>
+</div>
+      
 
         <div class="grid lg:grid-cols-3 gap-4 mt-4">
           <Education
@@ -118,16 +117,21 @@ import Text from "../components/Text.astro";
         >
           Erfaring
         </div>
-        <div>
-          <InfoHeader>
-            <Text slot="udannelse" teksttype="hollow-sm-primary">Udannelse</Text
-            >
-            <Text slot="erfaring" teksttype="text-primary">Erfaring</Text>
-            <Text slot="programmer" teksttype="hollow-sm-primary"
-              >Programmer</Text
-            >
-          </InfoHeader>
-        </div>
+       <div class="pb-10 pt-5">
+  <div
+    class="hidden md:grid md:grid-cols-3 gap-4 mb-2 items-center text-center"
+  >
+    <Headings htmlheading="h2" size="medium" stylingclasses="hollowSm">Udannelse</Headings>
+  <Headings htmlheading="h2" size="medium" font="anton" >
+  Erfaring
+</Headings>
+
+<Headings htmlheading="h2" size="medium" font="anton" stylingclasses="hollowSm">
+  Programmer
+</Headings>
+  </div>
+  <div class="border border-[#035EC7]"></div>
+</div>
 
         <div class="grid lg:grid-cols-3 gap-4 mt-4">
           <Education
@@ -154,14 +158,16 @@ import Text from "../components/Text.astro";
         >
           Programmer
         </div>
-        <div>
-          <InfoHeader>
-            <Text slot="udannelse" teksttype="hollow-sm-primary">Udannelse</Text
-            >
-            <Text slot="erfaring" teksttype="hollow-sm-primary">Erfaring</Text>
-            <Text slot="programmer" teksttype="text-primary">Programmer</Text>
-          </InfoHeader>
-        </div>
+        <div class="pb-10 pt-5">
+  <div
+    class="hidden md:grid md:grid-cols-3 gap-4 mb-2 items-center text-center"
+  >
+    <Headings htmlheading="h2" size="medium" font="anton" stylingclasses="hollowSm" >Udannelse</Headings>
+    <Headings htmlheading="h2" size="medium" font="anton" stylingclasses="hollowSm">Erfaring</Headings>
+    <Headings htmlheading="h2" size="medium">Programmer</Headings>
+  </div>
+  <div class="border border-[#035EC7]"></div>
+</div>
 
         <div class="grid lg:grid-cols-3 md:gap-4 mt-4">
           <div class="md:mr-20">
@@ -234,15 +240,15 @@ import Text from "../components/Text.astro";
       <section class="bg-secondary/20 md:hidden">
         <div class="pt-20 pb-15">
           <div class="text-center max-w-md mx-auto px-4">
-            <h2 class="font-extrabold text-[20px] mb-4">
+            <Headings htmlheading="h2" size="medium" font="poppins" >
               Kunne du tænke dig at høre mere?
-            </h2>
-            <p class="mb-2">
+			</Headings>
+            <Text text="brødtekst" >
               Du er altid velkommen til at tage kontakt, hvis du vil vide mere
               om mit arbejde, mine kompetencer eller mulige samarbejder.
-            </p>
+			</Text>
             <br />
-            <p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
+           	<Text> Skriv til mig – så finder vi et tidspunkt at mødes!	</Text>
           </div>
 
           <div class="flex justify-center pl-15 pr-15">
@@ -250,16 +256,13 @@ import Text from "../components/Text.astro";
           </div>
 
           <div class="items-center flex justify-center gap-2 m-4">
-            <img class="w-7" src="/img/mail.webp" alt="mail icon" />
-            <p>
-              <a
-                href="mailto:celinakhrs@gmail.com"
-                class="underline hover:text-primary"
-              >
-                celinakhrs@gmail.com
-              </a>
-            </p>
-          </div>
+  <img class="w-7" src="/img/mail.webp" alt="mail icon" />
+  <Text text="brødtekst">
+    <a class="underline hover:text-secondary" href="mailto:celinakhrs@gmail.com">
+      celinakhrs@gmail.com
+    </a>
+  </Text>
+</div>
 
           <div class="items-center flex justify-center gap-2 m-4">
             <img
@@ -267,12 +270,12 @@ import Text from "../components/Text.astro";
               src="/img/linkedinlightblue.webp"
               alt="linkedin icon"
             />
-            <p>
-              <Link
+            <Text text="brødtekst">
+              <a class="underline hover:text-secondary"
                 href="https://www.linkedin.com/in/celina-sguazzino/"
-                target="_blank">Besøg min Linkedin</Link
+                target="_blank">Besøg min Linkedin</a
               >
-            </p>
+			</Text>
           </div>
         </div>
       </section>
@@ -286,39 +289,37 @@ import Text from "../components/Text.astro";
         </div>
 
         <div class="text-center max-w-135 pr-10">
-          <h2 class="font-extrabold text-[25px]">
-            Kunne du tænke dig at høre mere?
-          </h2>
+         <div class="text-center max-w-md mx-auto px-4">
+            <Headings htmlheading="h2" size="medium" font="poppins" >
+              Kunne du tænke dig at høre mere?
+			</Headings>
           <br />
-          <p>
+          <Text text="brødtekst" >
             Du er altid velkommen til at tage kontakt, hvis du vil vide mere om
             mit arbejde, mine kompetencer eller mulige samarbejder.
-          </p>
+		  </Text>
           <br />
-          <p>Skriv til mig – så finder vi et tidspunkt at mødes!</p>
-          <div class="items-center flex justify-center gap-2 m-4 pt-10">
-            <img class="w-7" src="/img/mail.webp" alt="mail icon" />
-            <p>
-              <a
-                href="mailto:celinakhrs@gmail.com"
-                class="underline hover:text-primary"
-              >
-                celinakhrs@gmail.com
-              </a>
-            </p>
-          </div>
+          <Text text="brødtekst" >Skriv til mig – så finder vi et tidspunkt at mødes!</Text>
+         <div class="items-center flex justify-center gap-2 m-4">
+  <img class="w-7" src="/img/mail.webp" alt="mail icon" />
+  <Text text="brødtekst">
+    <a class="underline hover:text-secondary" href="mailto:celinakhrs@gmail.com">
+      celinakhrs@gmail.com
+    </a>
+  </Text>
+</div>
           <div class="items-center flex justify-center gap-2 m-4">
             <img
               class="w-7"
               src="/img/linkedinlightblue.webp"
               alt="linkedin icon"
             />
-            <p>
-              <Link
+          <Text text="brødtekst">
+              <a class="underline hover:text-secondary"
                 href="https://www.linkedin.com/in/celina-sguazzino/"
-                target="_blank">Besøg min Linkedin</Link
+                target="_blank">Besøg min Linkedin</a
               >
-            </p>
+			</Text>
           </div>
         </div>
       </section>

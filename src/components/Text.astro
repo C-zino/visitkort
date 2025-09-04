@@ -1,15 +1,13 @@
 ---
-const { teksttype = "brødtekst", stylingclasses = "" } = Astro.props;
+const { teksttype="brødtekst", stylingclasses="" } = Astro.props;
 
 const sizeClasses = {
-  konsultativ: "text-sm italic",
-  brødtekst: "text-xl my-4",
-  "hollow-lg": "HollowText text-4xl ",
-  "hollow-sm": "HollowTextSm text-2xl ",
-  "hollow-sm-primary": "HollowTextSmPrimary text-2xl ",
+  "brødtekst": "text-sm md:text-base  ",
+  "text": "text-sm md:text-base my-2",
+  "textbold": "text-sm md:text-base font-extrabold font-weight ",
+  "konsultativ": "text-sm md:text-base italic",
+  "lille": "text-[12px] md:text-[14px] my-2",
 };
 ---
 
-<p class:list={[sizeClasses[teksttype], stylingclasses]}>
-  <slot />
-</p>
+<p class:list={[sizeClasses[teksttype], stylingclasses]}><slot /></p>
