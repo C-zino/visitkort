@@ -9,7 +9,10 @@ import Headings from "../components/Heading.astro";
 
 <MainLayout title="Titel">
   <div class="text-primary bg-background font-main pt-40 md:pt-10">
-    <section id="om-mig" class="scroll-mt-24 mb-0">
+    <section
+      id="om-mig"
+      class="scroll-mt-24 mb-0 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+    >
       <div class="relative md:top-30 overflow-hidden w-full">
         <div
           class="flex w-max relative z-10 animate-[runningText_50s_linear_infinite]"
@@ -38,8 +41,7 @@ import Headings from "../components/Heading.astro";
         class="grid md:grid-cols-2 md:grid-rows-4 gap-4 m-5 items-center lg:ml-40 lg:mr-40"
       >
         <div
-          class="max-w-xl m-auto md:pt-12 lg:pt-0 md:row-span-4 w-full h-full relative z-20
-         opacity-0 translate-y-10 animate-[fadeInUp_1s_ease-out_0.3s_forwards]"
+          class="max-w-xl m-auto md:pt-12 lg:pt-0 md:row-span-4 w-full h-full relative z-20"
         >
           <img
             src="/img/profilewframe.webp"
@@ -48,8 +50,7 @@ import Headings from "../components/Heading.astro";
           />
         </div>
         <div
-          class="md:col-start-2 md:row-start-2 row-span-3 max-w-2xl text-center md:text-left mx-auto md:mx-0 pb-10 px-10
-         opacity-0 translate-y-10 animate-[fadeInUp_1s_ease-out_0.6s_forwards]"
+          class="md:col-start-2 md:row-start-2 row-span-3 max-w-2xl text-center md:text-left mx-auto md:mx-0 pb-10 px-10"
         >
           <Text text="brødtekst">
             Jeg hedder Celina og studerer Multimediedesign på EK, hvor jeg
@@ -70,7 +71,9 @@ import Headings from "../components/Heading.astro";
     </section>
 
     <div id="kompetencer" class="m-10 md:ml-30 md:mr-30 scroll-mt-24">
-      <article class="mb-10">
+      <article
+        class="mb-10 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+      >
         <div
           class="font-heading text-[20px] tracking-[0.10em] uppercase md:hidden font-extrabold text-center"
         >
@@ -137,7 +140,9 @@ import Headings from "../components/Heading.astro";
         </div>
       </article>
 
-      <article class="mb-10">
+      <article
+        class="mb-10 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+      >
         <div
           class="font-heading text-[20px] tracking-[0.10em] uppercase font-extrabold md:hidden text-center"
         >
@@ -190,7 +195,9 @@ import Headings from "../components/Heading.astro";
         </div>
       </article>
 
-      <article class="mb-10">
+      <article
+        class="mb-10 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+      >
         <div
           class="font-heading text-[20px] tracking-[0.10em] uppercase font-extrabold md:hidden text-center"
         >
@@ -286,7 +293,10 @@ import Headings from "../components/Heading.astro";
     </div>
 
     <!-- MOBILE -->
-    <div id="kontakt" class="scroll-mt-24">
+    <div
+      id="kontakt"
+      class="scroll-mt-24 intersect:animate-fade-up intersect:animate-duration[5000ms]"
+    >
       <section class="bg-secondary/20 md:hidden">
         <div class="pt-20 pb-15">
           <div class="text-center max-w-md mx-auto px-4">
@@ -336,7 +346,7 @@ import Headings from "../components/Heading.astro";
 
       <!-- WEB -->
       <section
-        class="hidden bg-secondary/20 md:flex gap-4 items-center justify-center inset-0 py-16"
+        class="hidden bg-secondary/20 md:flex gap-4 items-center justify-center inset-0 py-16 intersect:animate-fade-up intersect:animate-duration[5000ms]"
       >
         <div class="max-w-150">
           <img src="/img/calender.webp" alt="Calender" />
@@ -399,17 +409,6 @@ import Headings from "../components/Heading.astro";
       }
       100% {
         transform: translateX(-50%);
-      }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(2.5rem);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
       }
     }
   </style>
